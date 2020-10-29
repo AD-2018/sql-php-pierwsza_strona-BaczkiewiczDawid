@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+</body>
+</html>
+
 <?php
     $servername = "172.16.131.125";
     $username = "z_ghj";
@@ -18,6 +30,6 @@
             echo("<tr>");
             echo("<td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td>");
             echo("</tr>");
-        }
-    echo("</table>")
+        };
+    echo("</table>");
 ?>
