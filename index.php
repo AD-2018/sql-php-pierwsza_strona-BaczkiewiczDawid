@@ -1,28 +1,24 @@
 <?php
-echo "Witaj świecie Nazywam sie Jan Kowalski";
+    $servername = "localhost";
+    $username = "FkhGuWFtGI";
+    $password = "Oxjz8eZoRW";
+    $dbname = "FkhGuWFtGI";
 
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+    $sql = "SELECT * FROM pracownicy, organizacja where id_org = dzial";
 
-$sql = "SELECT id, firstname, lastname FROM MyGuests";
-$result = $conn->query($sql);
+    $result = mysqli_query($conn, $sql);
 
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
-$conn->close();
+    echo("<h1>Zadanie 1</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>ID</th><th>Imie</th><th>Zarobki</th><th>Data Urodzenia</th><th>Dzial</th><th>Nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
 ?>
