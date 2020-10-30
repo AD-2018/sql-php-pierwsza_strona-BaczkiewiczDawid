@@ -6,7 +6,7 @@
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    $sql = "SELECT * FROM pracownicy, organizacja where id_org = dzial";
+    $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial";
 
     $result = mysqli_query($conn, $sql);
 
