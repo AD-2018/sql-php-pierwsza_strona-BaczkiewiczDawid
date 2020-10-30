@@ -1,6 +1,6 @@
 <?php
-    require_once("connect");
-    
+    require_once("connect.php");
+
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial";
 
     $result = mysqli_query($conn, $sql);
