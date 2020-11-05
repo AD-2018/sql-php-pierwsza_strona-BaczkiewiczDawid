@@ -15,6 +15,10 @@
 
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial";
 
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
     $result = mysqli_query($conn, $sql);
 
     if ($conn->query($sql) === TRUE) {
