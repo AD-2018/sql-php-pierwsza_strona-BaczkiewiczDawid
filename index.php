@@ -9,6 +9,8 @@
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid">github</a>
     <h1>Dawid Bączkiewicz nr1</h1>
+
+    <a href="orgPracownicy.php">Organizacja i Pracownicy</a>
 </body>
 </html>
 <?php
