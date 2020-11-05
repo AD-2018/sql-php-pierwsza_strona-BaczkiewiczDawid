@@ -17,6 +17,13 @@
 
     $result = mysqli_query($conn, $sql);
 
+    if ($conn->query($sql) === TRUE) {
+        $last_id = $conn->insert_id;
+        echo "New record created successfully. Last inserted ID is: " . $last_id;
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
     echo("<h1>Zadanie 1</h1>");
     echo("<h2>".$sql."</h2>");
 
