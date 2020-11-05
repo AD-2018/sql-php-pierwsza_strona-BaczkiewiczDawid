@@ -13,5 +13,10 @@ table {
 }
 
 th {
-    padding: 5px 15px
+    padding: 5px 15px;
+    text-align: center;
+}
+
+td {
+    text-align: center;
 }
