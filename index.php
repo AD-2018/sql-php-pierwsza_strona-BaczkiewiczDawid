@@ -63,6 +63,8 @@
 
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND imie not like '%a'";
 
+    $result = mysqli_query($conn, $sql);
+
     echo("<h1>Zadanie 3</h1>");
     echo("<h2>".$sql."</h2>");
 
