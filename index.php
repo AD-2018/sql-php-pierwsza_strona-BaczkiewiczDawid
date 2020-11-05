@@ -19,9 +19,9 @@
 
     if ($conn->query($sql) === TRUE) {
         $last_id = $conn->insert_id;
-        echo "New record created successfully. Last inserted ID is: " . $last_id;
+        echo "ok";
       } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
 
     echo("<h1>Zadanie 1</h1>");
