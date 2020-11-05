@@ -11,6 +11,7 @@
     <h1>Dawid Bączkiewicz nr1</h1>
 
     <a href="orgPracownicy.php">Organizacja i Pracownicy</a>
+    <a href="funkAgregujaca.php">Funkcje agregujące</a>
 </body>
 </html>
 <?php
