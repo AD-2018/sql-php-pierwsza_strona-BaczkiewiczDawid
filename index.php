@@ -45,6 +45,8 @@
 
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND imie like '%a'";
 
+    $result = mysqli_query($conn, $sql);
+
     echo("<h1>Zadanie 2</h1>");
     echo("<h2>".$sql."</h2>");
 
