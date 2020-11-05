@@ -21,13 +21,11 @@
       }
 
     $result = mysqli_query($conn, $sql);
-
-    if ($conn->query($sql) === TRUE) {
-        $last_id = $conn->insert_id;
-        echo "ok";
-      } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-      }
+    if ( $result) {
+         echo "<li>ok";
+     } else {
+       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
 
     echo("<h1>Zadanie 1</h1>");
     echo("<h2>".$sql."</h2>");
