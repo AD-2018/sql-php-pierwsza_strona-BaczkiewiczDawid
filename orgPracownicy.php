@@ -7,6 +7,8 @@
 </head>
 <body>
     <a href="index.php">Strona główna</a>
+    <a href="funkAgregujaca.php">Funkcje Agregujące</a>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid">github</a>
 </body>
 </html>
 <?php
