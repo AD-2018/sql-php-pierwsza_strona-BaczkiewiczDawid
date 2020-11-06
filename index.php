@@ -15,7 +15,7 @@
 </body>
 </html>
 <?php
-    $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
+    $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND dzial = 2";
     $result = mysqli_query($conn, $sql);
 
     echo("<h1>Zadanie 1</h1>");
@@ -32,7 +32,7 @@
 
     //------------------------------------
 
-    $sql = "SELECT * FROM pracownicy WHERE (dzial = 2 OR dzial = 3)";
+    $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND (dzial = 2 OR dzial = 3)";
     $result = mysqli_query($conn, $sql);
 
     echo("<h1>Zadanie 2</h1>");
@@ -49,7 +49,7 @@
 
     //-----------------------------------
 
-    $sql = "SELECT * FROM pracownicy WHERE zarobki < 30";
+    $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND zarobki < 30";
     $result = mysqli_query($conn, $sql);
 
     echo("<h1>Zadanie 3</h1>");
