@@ -15,6 +15,8 @@
 </body>
 </html>
 <?php
+    require_once("connect.php");
+    
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND dzial = 2";
     $result = mysqli_query($conn, $sql);
 
