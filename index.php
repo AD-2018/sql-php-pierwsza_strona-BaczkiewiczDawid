@@ -49,7 +49,7 @@
 
     //-----------------------------------
 
-    $sql = "SELECT * FROM pracownicy WHERE zarobki < 30;
+    $sql = "SELECT * FROM pracownicy WHERE zarobki < 30";
     $result = mysqli_query($conn, $sql);
 
     echo("<h1>Zadanie 3</h1>");
