@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid">github</a>
     <h1>Dawid Bączkiewicz nr1</h1>
-
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid">github</a>
+    <br>
     <a href="orgPracownicy.php">Organizacja i Pracownicy</a>
     <a href="funkAgregujaca.php">Funkcje agregujące</a>
 </body>

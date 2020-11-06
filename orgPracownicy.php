@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="index.php">Strona główna</a>
-    <a href="funkAgregujaca.php">Funkcje Agregujące</a>
+    <h1>Dawid Bączkiewicz nr1</h1>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid">github</a>
+    <br>
+    <a href="index.php">Pracownicy</a>
+    <a href="funkAgregujaca.php">Funkcje agregujące</a>
 </body>
 </html>
 <?php
