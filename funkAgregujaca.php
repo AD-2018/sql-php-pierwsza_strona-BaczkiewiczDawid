@@ -170,4 +170,22 @@
             echo("</tr>");
         };
     echo("</table>");
+
+    //-------------------------------------------------------------
+
+    $sql = "SELECT sum(zarobki), nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY nazwa_dzial";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 8</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma zarobkow</th><th>nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['sum(zarobki)']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
 ?>
