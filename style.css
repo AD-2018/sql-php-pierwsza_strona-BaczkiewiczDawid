@@ -47,3 +47,7 @@ tr:nth-child(even) {
 .github-link {
     margin-bottom: 1rem;
 }
+
+.nav {
+    margin-top: 1rem;
+}
