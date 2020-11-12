@@ -141,7 +141,7 @@
 
     $result = mysqli_query($conn, $sql);
 
-    echo("<h1>Zadanie 4</h1>");
+    echo("<h1>Zadanie 7</h1>");
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
@@ -159,7 +159,7 @@
 
     $result = mysqli_query($conn, $sql);
 
-    echo("<h1>Zadanie 4</h1>");
+    echo("<h1>Zadanie 8</h1>");
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
@@ -167,6 +167,80 @@
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
             echo("<td>".$row['liczba_pracownikow']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+    
+    //-------------------------------------------------------------
+
+    echo("<h1>GROUP BY</h1>")
+
+    $sql = "SELECT sum(zarobki) as suma_zarobkow FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 9</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma zarobkow</th><th>Dzial</th><th>Nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['suma_zarobkow']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------------------------
+
+    $sql = "SELECT count(imie) as suma_pracownikow FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 10</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma pracownikow</th><th>Dzial</th><th>Nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['suma_pracownikow']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------------------------
+
+    $sql = "SELECT avg(zarobki) as avg_zarobki FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 11/h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>srednia zarobkow</th><th>Dzial</th><th>Nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['avg_zarobkow']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------------------------
+
+    $sql = "SELECT sum(zarobki) as suma_zarobkow, if( (imie LIKE '%a'), 'Kobiety','Mężczyźni') as 'plec' FROM `pracownicy` GROUP by plec";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 12</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma zarobkow</th><th>Dzial</th><th>Nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['suma_zarobkow']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
             echo("</tr>");
         };
     echo("</table>");
