@@ -226,22 +226,4 @@
             echo("</tr>");
         };
     echo("</table>");
-
-    //-------------------------------------------------------------
-
-    $sql = "SELECT sum(zarobki) as suma_zarobkow, if( (imie LIKE '%a'), 'Kobiety','Mężczyźni') as 'plec' FROM `pracownicy` GROUP by plec";
-
-    $result = mysqli_query($conn, $sql);
-
-    echo("<h1>Zadanie 12</h1>");
-    echo("<h2>".$sql."</h2>");
-
-    echo("<table border='1'>");
-    echo("<th>suma zarobkow</th><th>Dzial</th><th>Nazwa dzial</th>");
-        while($row = mysqli_fetch_assoc($result)) {
-            echo("<tr>");
-            echo("<td>".$row['suma_zarobkow']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
-            echo("</tr>");
-        };
-    echo("</table>");
 ?>
