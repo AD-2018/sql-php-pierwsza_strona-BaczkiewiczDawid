@@ -192,7 +192,7 @@
     echo("</table>");
 
     //-------------------------------------------------------------
-
+/*
     $sql = "SELECT count(imie) as suma_pracownikow, dzial, nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
 
     $result = mysqli_query($conn, $sql);
@@ -226,4 +226,5 @@
             echo("</tr>");
         };
     echo("</table>");
+    */
 ?>
