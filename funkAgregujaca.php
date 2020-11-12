@@ -175,7 +175,7 @@
 
     echo("<h1>GROUP BY</h1>");
 
-    $sql = "SELECT sum(zarobki) as suma_zarobkow, nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
+    $sql = "SELECT sum(zarobki) as wszystkie_zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
 
     $result = mysqli_query($conn, $sql);
 
@@ -186,7 +186,7 @@
     echo("<th>suma zarobkow</th><th>Nazwa dzial</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo("<td>".$row['suma_zarobkow']."</td><td>".$row['nazwa_dzial']."</td>";
+            echo("<td>".$row['wszystkie_zarobki']."</td><td>".$row['nazwa_dzial']."</td>";
             echo("</tr>");
         };
     echo("</table>");
