@@ -173,7 +173,7 @@
     
     //-------------------------------------------------------------
 
-    echo("<h1>GROUP BY</h1>")
+    echo("<h1>GROUP BY</h1>");
 
     $sql = "SELECT sum(zarobki) as suma_zarobkow, nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
 
@@ -183,7 +183,7 @@
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
-    echo("<th>suma zarobkow</th><th>Dzial</th><th>Nazwa dzial</th>");
+    echo("<th>suma zarobkow</th><th>Nazwa dzial</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
             echo("<td>".$row['suma_zarobkow']."</td><td>".$row['nazwa_dzial']."</td>";
@@ -192,7 +192,7 @@
     echo("</table>");
 
     //-------------------------------------------------------------
-/*
+
     $sql = "SELECT count(imie) as suma_pracownikow, dzial, nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
 
     $result = mysqli_query($conn, $sql);
@@ -226,5 +226,4 @@
             echo("</tr>");
         };
     echo("</table>");
-    */
 ?>
