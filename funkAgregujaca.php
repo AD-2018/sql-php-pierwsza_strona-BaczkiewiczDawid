@@ -172,7 +172,7 @@
     echo("</table>");
     
     //-------------------------------------------------------------
-/*
+
     echo("<h1>GROUP BY</h1>")
 
     $sql = "SELECT sum(zarobki) as suma_zarobkow FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
@@ -190,7 +190,7 @@
             echo("</tr>");
         };
     echo("</table>");
-
+/*
     //-------------------------------------------------------------
 
     $sql = "SELECT count(imie) as suma_pracownikow FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
