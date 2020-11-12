@@ -43,3 +43,7 @@ a:hover {
 tr:nth-child(even) {
     background-color: rgb(207, 207, 207);
 }
+
+.github-link {
+    margin-bottom: 1rem;
+}

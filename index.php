@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Dawid Bączkiewicz nr1</h1>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid">github</a>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
     <br>
     <nav class="nav">
         <a href="index.php">Pracownicy</a>
