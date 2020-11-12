@@ -222,7 +222,7 @@
     echo("<th>srednia zarobkow</th><th>Dzial</th><th>Nazwa dzial</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo("<td>".$row['avg_zarobkow']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("<td>".$row['avg_zarobki']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
             echo("</tr>");
         };
     echo("</table>");
