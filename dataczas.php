@@ -201,7 +201,7 @@
 
     //--------------------------------------------
 
-    $sql = "SELECT imie, nazwa_dzial, min(YEAR(curdate()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE id_org = dzial AND (nazwa_dzial = 'handel' OR nazwa_dzial = 'serwis') GROUP BY dzial";
+    $sql = "SELECT nazwa_dzial, min(YEAR(curdate()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE id_org = dzial AND (nazwa_dzial = 'handel' OR nazwa_dzial = 'serwis') GROUP BY dzial";
 
     $result = mysqli_query($conn, $sql);
 
