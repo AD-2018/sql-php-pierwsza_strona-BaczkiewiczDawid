@@ -183,7 +183,7 @@
 
     //-------------------------------------------
 
-    $sql = "SELECT MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek, dzial, nazwa_dzial from pracownicy,organizacja WHERE id_org = dzial AND (nazwa_dzial = 'handel' OR nazwa_dzial = 'serwis') GROUP BY dzial";
+    $sql = "SELECT MIN(YEAR(CURDATE()) - YEAR('data_urodzenia')) as wiek, dzial, nazwa_dzial from pracownicy, organizacja WHERE id_org = dzial AND (nazwa_dzial = 'handel' OR nazwa_dzial = 'serwis') GROUP BY dzial";
 
     $result = mysqli_query($conn, $sql);
 
@@ -201,7 +201,7 @@
 
     //--------------------------------------------
 
-    $sql = "SELECT MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek, dzial, nazwa_dzial, imie from pracownicy,organizacja WHERE id_org = dzial AND (nazwa_dzial = 'handel' OR nazwa_dzial = 'serwis') GROUP BY dzial";
+    $sql = "SELECT MIN(YEAR(CURDATE()) - YEAR('data_urodzenia')) as wiek, dzial, nazwa_dzial, imie from pracownicy, organizacja WHERE id_org = dzial AND (nazwa_dzial = 'handel' OR nazwa_dzial = 'serwis') GROUP BY dzial";
 
     $result = mysqli_query($conn, $sql);
 
