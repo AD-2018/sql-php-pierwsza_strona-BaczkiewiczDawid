@@ -278,6 +278,7 @@
     $sql1 = "SET lc_time_names = 'pl_PL'";
     $sql = "SELECT DATE_FORMAT(CURDATE(), '%W') as dzien";
 
+    $result1 = mysqli_query($conn, $sql1);
     $result = mysqli_query($conn, $sql);
     
     echo("<h1>Zadanie 2</h1>");
