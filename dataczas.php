@@ -54,4 +54,94 @@
             echo("</tr>");
         };
     echo("</table>");
+
+    //-------------------------------------------
+
+    $sql = "SELECT * , sum(YEAR(curdate())-YEAR(data_urodzenia)) AS wiek FROM pracownicy, organizacja WHERE id_org = dzial";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 3</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>Suma lat</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['wiek']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------
+
+    $sql = "SELECT sum(YEAR(curdate())-YEAR(data_urodzenia)) AS wiek FROM pracownicy, organizacja WHERE id_org = dzial AND nazwa_dzial='handel'";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 4</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>Suma lat</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['wiek']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------
+
+    $sql = "SELECT sum(YEAR(curdate())-YEAR(data_urodzenia)) AS wiek FROM pracownicy, organizacja WHERE id_org = dzial AND imie LIKE '%a'";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 5</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>Suma lat</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['wiek']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------
+
+    $sql = "SELECT sum(YEAR(curdate())-YEAR(data_urodzenia)) AS wiek FROM pracownicy, organizacja WHERE id_org = dzial AND imie NOT LIKE '%a'";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 6</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>Suma lat</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['wiek']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------
+
+    $sql = "SELECT avg(YEAR(curdate())-YEAR(data_urodzenia)) AS wiek, dzial, nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY dzial";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 6</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>srednia lat</th><th>Dzial</th><th>Nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['wiek']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
 ?>
