@@ -311,7 +311,7 @@
 
     //--------------------------------------------
 
-    $sql = "SELECT *, DATE_FORMAT(data_urodzenia,'%Y-%M-%W') from pracownicy";
+    $sql = "SELECT *, DATE_FORMAT(data_urodzenia,'%Y-%M-%W') as ymw from pracownicy";
 
     $result = mysqli_query($conn, $sql);
     
@@ -322,7 +322,7 @@
     echo("<th>ID</th><th>Imie</th><th>dzial</th><th>zarobki</th><th>Data urodzenia</th><th>data urodzenia</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['DATE_FORMAT(data_urodzenia,"%Y-%M-%W")']);
+            echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['ymw']);
             echo("</tr>");
         };
     echo("</table>");
