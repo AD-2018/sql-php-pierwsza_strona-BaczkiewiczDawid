@@ -444,9 +444,11 @@ ORDER BY
           WHEN dzien = 'Sobota' THEN 6
           WHEN dzien = 'Niedziela' THEN 7
           END ASC";
-    echo($sql);
 
-$result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 9</h1>");
+    echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
     echo("<th>Dzień</th><th>Liczba</th>");
