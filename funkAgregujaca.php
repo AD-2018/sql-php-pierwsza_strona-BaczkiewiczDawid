@@ -173,7 +173,7 @@
 
     //-------------------------------------------------------------
 
-    echo("<h1>Group by</h1>")
+    echo("<h1>Group by</h1>");
 
     $sql = "SELECT sum(zarobki), nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY nazwa_dzial";
 
