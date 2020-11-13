@@ -215,7 +215,7 @@
 
     $result = mysqli_query($conn, $sql);
 
-    echo("<h1>Zadanie 8</h1>");
+    echo("<h1>Zadanie 11</h1>");
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
@@ -233,7 +233,81 @@
 
     $result = mysqli_query($conn, $sql);
 
-    echo("<h1>Zadanie 8</h1>");
+    echo("<h1>Zadanie 12</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma zarobkow</th><th>nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['sum(zarobki)']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------------------------
+
+    $sql = "SELECT sum(zarobki), nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY nazwa_dzial";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 13</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma zarobkow</th><th>nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['sum(zarobki)']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------------------------
+
+    echo("<h1>klauzula HAVING</h1>")
+
+    $sql = "SELECT sum(zarobki), nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY nazwa_dzial HAVING sum(zarobki) < 28";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 14</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma zarobkow</th><th>nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['sum(zarobki)']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------------------------
+
+    $sql = "SELECT sum(zarobki), nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY nazwa_dzial HAVING sum(zarobki) > 30";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 15</h1>");
+    echo("<h2>".$sql."</h2>");
+
+    echo("<table border='1'>");
+    echo("<th>suma zarobkow</th><th>nazwa dzial</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['sum(zarobki)']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //-------------------------------------------------------------
+
+    $sql = "SELECT count(imie), nazwa_dzial FROM pracownicy, organizacja WHERE id_org = dzial GROUP BY nazwa_dzial HAVING count(imie) > 3";
+
+    $result = mysqli_query($conn, $sql);
+
+    echo("<h1>Zadanie 16</h1>");
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
