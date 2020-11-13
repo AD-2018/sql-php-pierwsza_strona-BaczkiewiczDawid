@@ -417,7 +417,7 @@ ORDER BY
 
     //--------------------------------------------
 
-    $sql = "SELECT count(DATE_FORMAT(data_urodzenia, '%W')) as ilosc FROM pracownicy where DATE_FORMAT(data_urodzenia, '%W') = 'Monday'";
+    $sql = "SELECT count(DATE_FORMAT(data_urodzenia, '%W')) as ilosc FROM pracownicy where DATE_FORMAT(data_urodzenia, '%W') = 'Poniedziałek'";
 
     $result = mysqli_query($conn, $sql);
         
@@ -429,6 +429,33 @@ ORDER BY
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
             echo("<td>".$row['ilosc']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //--------------------------------------------
+
+    $sql = "SELECT Count(DATE_FORMAT(data_urodzenia, '%W')) as dzien FROM pracownicy ORDER BY 
+    CASE 
+         WHEN dzien = 'Poniedzialek' THEN 1
+         WHEN dzien = 'Wtorek' THEN 2
+         WHEN dzien = 'Sroda' THEN 3
+         WHEN dzien= 'Czwartek' THEN 4
+         WHEN dzien = 'Piatek' THEN 5
+         WHEN dzien = 'Sobota' THEN 6
+         WHEN dzien = 'Niedziela' THEN 7
+    END ASC";
+
+    $result = mysqli_query($conn, $sql);
+        
+    echo("<h1>Zadanie 10</h1>");
+    echo("<h2>".$sql."</h2>");
+        
+    echo("<table border='1'>");
+    echo("<th>Dzien</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['dzien']."</td>");
             echo("</tr>");
         };
     echo("</table>");
