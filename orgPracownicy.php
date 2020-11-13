@@ -92,6 +92,8 @@
 
     //---------------------------------------------------------------
 
+    echo("<h1>Sortowanie</h1>")
+
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial ORDER BY imie desc";
 
     $result = mysqli_query($conn, $sql);
@@ -181,6 +183,8 @@
     echo("</table>");
 
     //---------------------------------------------------------------
+
+    echo("<h1>LIMIT</h1>")
 
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND dzial = 4 ORDER BY zarobki asc LIMIT 2";
 
