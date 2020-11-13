@@ -25,8 +25,9 @@
 
     $result = mysqli_query($conn, $sql);
 
-    echo("<h1>Zadanie 16</h1>");
+    echo("<h1>Zadanie 1</h1>");
     echo("<h2>".$sql."</h2>");
+
     echo("<table border='1'>");
     echo("<th>Wiek</th><th>ID</th><th>Imie</th><th>dzial</th><th>zarobki</th><th>Data urodzenia</th>");
         while($row = mysqli_fetch_assoc($result)) {
@@ -38,17 +39,18 @@
 
     //-------------------------------------------
 
-    $sql = "SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, organizacja WHERE nazwa_dzial='serwis'";
+    $sql = "SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, organizacja WHERE id_org = dzial AND nazwa_dzial='serwis'";
 
     $result = mysqli_query($conn, $sql);
 
-    echo("<h1>Zadanie 16</h1>");
+    echo("<h1>Zadanie 2</h1>");
     echo("<h2>".$sql."</h2>");
+
     echo("<table border='1'>");
     echo("<th>Wiek</th><th>ID</th><th>Imie</th><th>Zarobki</th><th>Data Urodzenia</th><th>Dzial</th><th>Nazwa dzial</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo("<td>".$row['wiek']"</td><td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("<td>".$row['wiek']."</td><td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
             echo("</tr>");
         };
     echo("</table>");
