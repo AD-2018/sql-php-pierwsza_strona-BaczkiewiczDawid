@@ -290,4 +290,40 @@
             echo("</tr>");
         };
     echo("</table>");
+
+    //--------------------------------------------
+
+    $sql = "SELECT curtime(4)";
+
+    $result = mysqli_query($conn, $sql);
+    
+    echo("<h1>Zadanie 4</h1>");
+    echo("<h2>".$sql."</h2>");
+    
+    echo("<table border='1'>");
+    echo("<th>Obecny czas</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['curtime(4)']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //--------------------------------------------
+
+    $sql = "SELECT *, DATE_FORMAT(data_urodzenia,'%Y-%M-%W') from pracownicy";
+
+    $result = mysqli_query($conn, $sql);
+    
+    echo("<h1>Zadanie 5</h1>");
+    echo("<h2>".$sql."</h2>");
+    
+    echo("<table border='1'>");
+    echo("<th>ID</th><th>Imie</th><th>dzial</th><th>zarobki</th><th>Data urodzenia</th><th>data urodzenia</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['DATE_FORMAT(data_urodzenia,'%Y-%M-%W')']);
+            echo("</tr>");
+        };
+    echo("</table>");
 ?>
