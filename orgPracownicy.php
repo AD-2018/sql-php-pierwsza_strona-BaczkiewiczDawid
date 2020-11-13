@@ -92,7 +92,7 @@
 
     //---------------------------------------------------------------
 
-    echo("<h1>Sortowanie</h1>")
+    echo("<h1>Sortowanie</h1>");
 
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial ORDER BY imie desc";
 
