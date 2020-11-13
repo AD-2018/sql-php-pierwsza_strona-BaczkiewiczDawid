@@ -337,10 +337,28 @@
     echo("<h2>".$sql."</h2>");
         
     echo("<table border='1'>");
-    echo("<th>ID</th><th>Imie</th><th>dzial</th><th>zarobki</th><th>Data urodzenia</th><th>dni</th><th>godziny</th><th>minuty</th>");
+    echo("<th>Imie</th><th>dni</th><th>godziny</th><th>minuty</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['dni']."</td><td>".$row['godziny']."</td><td>".$row['minuty']."</td>");
+            echo("<td>".$row['imie']."</td><td>".$row['dni']."</td><td>".$row['godziny']."</td><td>".$row['minuty']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //--------------------------------------------
+
+    $sql = "SELECT DATE_FORMAT('2002-10-22', '%j') as dzienroku";
+
+    $result = mysqli_query($conn, $sql);
+        
+    echo("<h1>Zadanie 7</h1>");
+    echo("<h2>".$sql."</h2>");
+        
+    echo("<table border='1'>");
+    echo("<th>Dzien w roku</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['dzienroku']."</td>");
             echo("</tr>");
         };
     echo("</table>");
