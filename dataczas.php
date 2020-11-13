@@ -403,7 +403,7 @@ ORDER BY
 
     $result = mysqli_query($conn, $sql);
         
-    echo("<h1>Zadanie 7</h1>");
+    echo("<h1>Zadanie 8</h1>");
     echo("<h2>".$sql."</h2>");
         
     echo("<table border='1'>");
@@ -411,6 +411,24 @@ ORDER BY
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
             echo("<td>".$row['dzien']."</td><td>".$row['imie']."</td><td>".$row['data_urodzenia']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //--------------------------------------------
+
+    $sql = "SELECT count(DATE_FORMAT(data_urodzenia, '%W')) as ilosc FROM pracownicy where DATE_FORMAT(data_urodzenia, '%W') = 'Monday'";
+
+    $result = mysqli_query($conn, $sql);
+        
+    echo("<h1>Zadanie 9</h1>");
+    echo("<h2>".$sql."</h2>");
+        
+    echo("<table border='1'>");
+    echo("<th>Ilosc pracownikow urodzonych w poniedzialek</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['ilosc']."</td>");
             echo("</tr>");
         };
     echo("</table>");
