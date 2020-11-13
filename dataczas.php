@@ -382,4 +382,36 @@
             echo("</tr>");
         };
     echo("</table>");
+
+    //--------------------------------------------
+
+    $sql = "SELECT
+    DATE_FORMAT(data_urodzenia,'%W') as dzien, imie, data_urodzenia
+FROM
+    pracownicy
+ORDER BY 
+    CASE
+         
+         WHEN dzien = 'Poniedzialek' THEN 1
+         WHEN dzien = 'Wtorek' THEN 2
+         WHEN dzien = 'Sroda' THEN 3
+         WHEN dzien= 'Czwartek' THEN 4
+         WHEN dzien = 'Piatek' THEN 5
+         WHEN dzien = 'Sobota' THEN 6
+         WHEN dzien = 'Niedziela' THEN 7
+    END ASC";
+
+    $result = mysqli_query($conn, $sql);
+        
+    echo("<h1>Zadanie 7</h1>");
+    echo("<h2>".$sql."</h2>");
+        
+    echo("<table border='1'>");
+    echo("<th>dzien</th><th>Imie</th><th>Data urodzenia</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['dzien']."</td><td>".$row['imie']."</td><td>".$row['data_urodzenia']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
 ?>
