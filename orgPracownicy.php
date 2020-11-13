@@ -184,7 +184,7 @@
 
     //---------------------------------------------------------------
 
-    echo("<h1>LIMIT</h1>")
+    echo("<h1>LIMIT</h1>");
 
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial AND dzial = 4 ORDER BY zarobki asc LIMIT 2";
 
