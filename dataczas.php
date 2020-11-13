@@ -27,7 +27,7 @@
 
     echo("<h1>Zadanie 16</h1>");
     echo("<h2>".$sql."</h2>");
-
+    echo("<th>Wiek</th><th>ID</th><th>Imie</th><th>dzial</th><th>zarobki</th><th>Data urodzenia</th>");
     echo("<table border='1'>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");

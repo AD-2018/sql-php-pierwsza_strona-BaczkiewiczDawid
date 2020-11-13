@@ -313,7 +313,6 @@
 
     echo("<table border='1'>");
     echo("<th>Ilosc pracownikow</th><th>nazwa dzial</th>");
-    echo("<th>ID</th><th>Imie</th><th>dzial</th><th>zarobki</th><th>Data urodzenia</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
             echo("<td>".$row['count(imie)']."</td><td>".$row['nazwa_dzial']."</td>");
