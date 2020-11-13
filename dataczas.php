@@ -201,8 +201,8 @@
 
     //--------------------------------------------
 
-    $sql = "select imie, nazwa_dzial, MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Wiek from pracownicy, organizacja where id_org=dzial and (nazwa_dzial='handel' or
-    nazwa_dzial='serwis') group by dzial";
+    $sql = "SELECT imie, nazwa_dzial, MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Wiek FROM pracownicy, organizacja WHERE id_org=dzial AND (nazwa_dzial='handel' OR
+    nazwa_dzial='serwis') GROUP BY dzial";
 
     $result = mysqli_query($conn, $sql);
 
@@ -210,10 +210,10 @@
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
-    echo("<th>Imie</th><th>wiek</th><th>Nazwa dzial</th>");
+    echo("<th>nazwa dzial</th><th>imie</th><th>wiek</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo ("<td>".$row['imie']."</td><td>".$row['Wiek']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['imie'].'</td><td>'.$row['Wiek'].'</td>');
             echo("</tr>");
         };
     echo("</table>");
