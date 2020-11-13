@@ -275,6 +275,25 @@
 
     //--------------------------------------------
 
+    $sql1 = "SET lc_time_names = 'pl_PL'";
+    $sql = "SELECT DATE_FORMAT(CURDATE(), '%W') as dzien";
+
+    $result = mysqli_query($conn, $sql);
+    
+    echo("<h1>Zadanie 2</h1>");
+    echo("<h2>".$sql."</h2>");
+    
+    echo("<table border='1'>");
+    echo("<th>dzien</th>");
+        while($row = mysqli_fetch_assoc($result)) {
+            echo("<tr>");
+            echo("<td>".$row['dzien']."</td>");
+            echo("</tr>");
+        };
+    echo("</table>");
+
+    //--------------------------------------------
+
     $sql = "SELECT *, DATE_FORMAT(data_urodzenia,'%W-%M-%Y') as miesiac from pracownicy";
 
     $result = mysqli_query($conn, $sql);
