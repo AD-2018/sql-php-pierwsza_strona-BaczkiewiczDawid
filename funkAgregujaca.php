@@ -14,6 +14,7 @@
         <a href="index.php">Pracownicy</a>
         <a href="funkAgregujaca.php">Funkcje agregujące</a>
         <a href="orgPracownicy.php">Organizacja i pracownicy</a>
+        <a href="dataczas.php">Data i czas</a>
     </nav>
 </body>
 </html>
@@ -311,10 +312,11 @@
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
-    echo("<th>suma zarobkow</th><th>nazwa dzial</th>");
+    echo("<th>Ilosc pracownikow</th><th>nazwa dzial</th>");
+    echo("<th>ID</th><th>Imie</th><th>dzial</th><th>zarobki</th><th>Data urodzenia</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo("<td>".$row['sum(zarobki)']."</td><td>".$row['nazwa_dzial']."</td>");
+            echo("<td>".$row['count(imie)']."</td><td>".$row['nazwa_dzial']."</td>");
             echo("</tr>");
         };
     echo("</table>");
