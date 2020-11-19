@@ -12,10 +12,14 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki) 
+$sql = "INSERT INTO Pracownik (null, $_POST['name'], dzial, zarobki) 
        VALUES (null,'Ksawery', 3, 36,'1995-10-21')";
 
-$conn->query($sql);
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
 $conn->close();
 ?>
