@@ -1,7 +1,7 @@
 <?php
 echo("jestes w insert.php");
 echo $_POST['imie'];
-
+/*
 $servername = "remotemysql.com";
 $username = "FkhGuWFtGI";
 $password = "9kRwNvqeLf";
@@ -23,4 +23,5 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+*/
 ?>
