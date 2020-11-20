@@ -2,10 +2,10 @@
 echo("jestes w insert.php");
 echo $_POST['imie'];
 
-$servername = "mysql-joannadyl.alwaysdata.net";
-$username = "joannadyl";
-$password = "lollol92589@";
-$dbname = "joannadyl_sql";
+$servername = "remotemysql.com";
+$username = "FkhGuWFtGI";
+$password = "9kRwNvqeLf";
+$dbname = "FkhGuWFtGI";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
