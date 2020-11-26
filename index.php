@@ -16,7 +16,7 @@
         <a href="orgPracownicy.php">Organizacja i pracownicy</a>
         <a href="dataczas.php">Data i czas</a>
         <a href="formularz.html">Formularz</a>
-        <a href="danedobazy.html">Dane do bazy</a>
+        <a href="danedobazy.php">Dane do bazy</a>
     </nav>
 </body>
 </html>
