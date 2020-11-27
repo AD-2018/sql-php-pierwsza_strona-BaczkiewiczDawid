@@ -58,7 +58,7 @@ tr:nth-child(even) {
     margin-bottom: 30px;
 }
 
-input {
+.input {
     margin-left: 1rem;
     margin-top: .5rem;
     border: none;

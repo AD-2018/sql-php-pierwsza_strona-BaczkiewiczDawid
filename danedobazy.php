@@ -20,15 +20,15 @@
     </nav><br>
     <h2>Dodawanie pracownika</h2>
     <form action="insert.php" method="POST">
-	    <input type="text" name="imie" placeholder="imie"><br>
-		<input type="number" name="dzial" placeholder="dzial"></br>
-		<input type="number" name="zarobki" placeholder="zarobki"></br>
-		<input type="date" name="data_urodzenia"></br>
+	    <input type="text" name="imie" placeholder="imie" class="input"><br>
+		<input type="number" name="dzial" placeholder="dzial" class="input"></br>
+		<input type="number" name="zarobki" placeholder="zarobki class="input></br>
+		<input type="date" name="data_urodzenia" class="input"></br>
 		<input type="submit" value="dodaj pracownika" class="button">
     </form>
     <h3>Usuwanie pracownika</h3>
     <form action="delete.php" method="POST">
-        <input type="number" name="id"></br>
+        <input type="number" name="id" class="input"></br>
         <input type="submit" value="Usuń pracownika" class="button">
      </form>
 </body>
