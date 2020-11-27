@@ -26,7 +26,7 @@
 		<input type="date" name="data_urodzenia" class="input"></br>
 		<input type="submit" value="dodaj pracownika" class="button">
     </form>
-    <h3>Usuwanie pracownika</h3>
+    <h3 class="delete-header">Usuwanie pracownika</h3>
     <form action="delete.php" method="POST">
         <input type="number" name="id" class="input"></br>
         <input type="submit" value="Usuń pracownika" class="button">
