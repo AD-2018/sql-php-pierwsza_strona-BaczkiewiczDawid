@@ -20,9 +20,9 @@
     </nav><br>
     <h2>Dodawanie pracownika</h2>
     <form action="insert.php" method="POST">
-	    <input type="text" name="imie"><br>
-		<input type="number" name="dzial"></br>
-		<input type="number" name="zarobki"></br>
+	    <input type="text" name="imie" placeholder="imie"><br>
+		<input type="number" name="dzial" placeholder="dzial"></br>
+		<input type="number" name="zarobki" placeholder="zarobki"></br>
 		<input type="date" name="data_urodzenia"></br>
 		<input type="submit" value="dodaj pracownika">
     </form>
@@ -44,8 +44,16 @@ echo("<table border='1'>");
 echo("<th>ID</th><th>Imie</th><th>Zarobki</th><th>Data Urodzenia</th><th>Dzial</th><th>Nazwa dzial</th>");
     while($row = mysqli_fetch_assoc($result)) {
         echo("<tr>");
-        echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
-        echo("</tr>");
+        echo('<td>'.$row['id_pracownicy'].'</td>'.'<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td>'.'<td>'.$row['dzial'].'</td>'.'<td>'.$row['data_urodzenia'].'</td>'.
+
+         '<td>
+         <form action="delete.php" method="POST">
+          <input type="number" name="id" value="'.$row['id_pracownicy'].'"></br>
+           <input type="submit" value="Usuń">
+    </form>
+         </td>');
+
+        echo('</tr>');
     };
 echo("</table>");
 ?>
