@@ -23,7 +23,7 @@ td {
     text-align: center;
 }
 
-h1,h2 {
+h1,h2,h3 {
     margin-top: 1rem;
     margin-left: 1rem;
 }
@@ -72,8 +72,4 @@ tr:nth-child(even) {
     font-weight: 700;
     margin-left: 1rem;
     margin-top: .5rem;
-}
-
-.delete-header {
-    margin-left: 1rem;
 }
