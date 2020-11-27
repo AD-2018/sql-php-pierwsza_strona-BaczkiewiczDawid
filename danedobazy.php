@@ -22,7 +22,7 @@
     <form action="insert.php" method="POST">
 	    <input type="text" name="imie" placeholder="imie" class="input"><br>
 		<input type="number" name="dzial" placeholder="dzial" class="input"></br>
-		<input type="number" name="zarobki" placeholder="zarobki class="input></br>
+		<input type="number" name="zarobki" placeholder="zarobki" class="input"></br>
 		<input type="date" name="data_urodzenia" class="input"></br>
 		<input type="submit" value="dodaj pracownika" class="button">
     </form>
