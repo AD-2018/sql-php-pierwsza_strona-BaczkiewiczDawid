@@ -57,3 +57,19 @@ tr:nth-child(even) {
 .name {
     margin-bottom: 30px;
 }
+
+input {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    border: none;
+    border-bottom: 1px solid black; 
+}
+
+.button {
+    padding: 8px 18px;
+    background-color: #2a2a2a;
+    color: #fafafa;
+    font-weight: 700;
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
