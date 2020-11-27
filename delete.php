@@ -18,6 +18,7 @@ echo $sql;
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
+  header('Location: danedobazy.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 };
