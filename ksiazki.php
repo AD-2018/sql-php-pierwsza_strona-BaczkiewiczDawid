@@ -60,7 +60,7 @@ echo("</table>");
 
 //--------------------------------------------------------------------
 
-$sql = "SELECT * FROM biblAutor_biblTytl";
+$sql = "SELECT * FROM biblAutor_biblTytul";
 
 $result = mysqli_query($conn, $sql);
 
