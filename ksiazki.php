@@ -26,6 +26,8 @@ require_once("connect.php");
 
 $sql = "SELECT * FROM biblAutor";
 
+$result = mysqli_query($conn, $sql);
+
 echo("<h1>BiblAutor</h1>");
 echo("<h2>".$sql."</h2>");
 
