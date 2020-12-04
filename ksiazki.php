@@ -18,10 +18,23 @@
         <a href="formularz.html">Formularz</a>
         <a href="danedobazy.php">Dane do bazy</a>
         <a href="ksiazki.php">Ksiazki</a>
-    </nav><br>
-    <form action="strona.php" method="POST">
-        <input type="text" name="firstname"><br>
-        <input type="submit" value="Wyślij do strona.php">
-    </form>
+    </nav>
 </body>
 </html>
+<?php
+require_once("connect.php");
+
+$sql = "SELECT * FROM biblAutor";
+
+echo("<h1>BiblAutor</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>Autor</th>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['autor']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
+?>
