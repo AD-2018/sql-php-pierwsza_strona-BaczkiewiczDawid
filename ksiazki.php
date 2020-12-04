@@ -46,7 +46,7 @@ $sql = "SELECT * FROM biblTytul";
 
 $result = mysqli_query($conn, $sql);
 
-echo("<h1>BiblAutor</h1>");
+echo("<h1>BiblTytul</h1>");
 echo("<h2>".$sql."</h2>");
 
 echo("<table border='1'>");
@@ -64,7 +64,7 @@ $sql = "SELECT * FROM biblAutor_biblTytul";
 
 $result = mysqli_query($conn, $sql);
 
-echo("<h1>BiblAutor</h1>");
+echo("<h1>BiblAutor_biblTytul</h1>");
 echo("<h2>".$sql."</h2>");
 
 echo("<table border='1'>");
