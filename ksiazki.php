@@ -39,4 +39,40 @@ echo("<th>ID</th><th>Autor</th>");
         echo("</tr>");
     };
 echo("</table>");
+
+//--------------------------------------------------------------------
+
+$sql = "SELECT * FROM biblTytul";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<h1>BiblAutor</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>Tytul</th>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['tytul']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
+
+//--------------------------------------------------------------------
+
+$sql = "SELECT * FROM biblAutor_biblTytl";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<h1>BiblAutor</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>biblAutor_id</th><th>biblTytul_id</th><td>biblWypoz</td>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['biblAutor_id']."</td><td>".$row['biblTytul_id']."</td><td>".$row['biblWypoz']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
 ?>
