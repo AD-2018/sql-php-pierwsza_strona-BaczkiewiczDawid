@@ -26,7 +26,7 @@ require_once("connect.php");
 
 echo("<select name='ksiazka'>
     <option>".$row['autor']"</option>
-</select>")
+</select>");
 
 $sql = "SELECT * FROM biblAutor";
 
@@ -76,6 +76,24 @@ echo("<th>ID</th><th>biblAutor_id</th><th>biblTytul_id</th><td>biblWypoz</td>");
     while($row = mysqli_fetch_assoc($result)) {
         echo("<tr>");
         echo("<td>".$row['id']."</td><td>".$row['biblAutor_id']."</td><td>".$row['biblTytul_id']."</td><td>".$row['biblWypoz']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
+
+//--------------------------------------------------------------------
+
+$sql = "SELECT * FROM biblTytul, biblAutor WHERE biblTytul.id = biblAutor.id";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<h1>BiblAutor_biblTytul</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>Autor</th><th>biblTytul</th>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['autor']."</td><td>".$row['tytul']."</td>");
         echo("</tr>");
     };
 echo("</table>");
