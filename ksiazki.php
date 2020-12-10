@@ -24,6 +24,15 @@
 <?php
 require_once("connect.php");
 
+$sql = "SELECT * FROM biblAutor, biblTytul";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<select>");
+while($row = mysqli_fetch_assoc($result)) {
+    echo("<td>".$row['autor']."</td><td>".$row['tytul']."</td>");
+}
+echo("</select>");
 
 $sql = "SELECT * FROM biblAutor";
 
