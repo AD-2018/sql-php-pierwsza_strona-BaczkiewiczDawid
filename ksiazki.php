@@ -28,11 +28,21 @@ $sql = "SELECT * FROM biblAutor, biblTytul";
 
 $result = mysqli_query($conn, $sql);
 
-echo("<select>");
-while($row = mysqli_fetch_assoc($result)) {
-    echo("<td>".$row['autor']."</td><td>".$row['tytul']."</td>");
-}
-echo("</select>");
+echo('<select name="autor">');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<option value="'.$row['id_autor'].'">');
+        echo($row['autor']);
+        echo("</option>"); 
+    }
+echo('</select>');
+
+echo('<select name="tytul">');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<option value="'.$row['id_tytul'].'">');
+        echo($row['tytul']);
+        echo("</option>"); 
+    }
+echo('</select>');
 
 $sql = "SELECT * FROM biblAutor";
 
