@@ -24,9 +24,6 @@
 <?php
 require_once("connect.php");
 
-echo("<select name='ksiazka'>
-    <option>".$row['autor']"</option>
-</select>");
 
 $sql = "SELECT * FROM biblAutor";
 
