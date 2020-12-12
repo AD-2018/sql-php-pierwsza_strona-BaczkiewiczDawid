@@ -86,4 +86,5 @@ tr:nth-child(even) {
 .strona {
     background-color: blue;
     margin: 10px;
+    width: 70%;
 }
