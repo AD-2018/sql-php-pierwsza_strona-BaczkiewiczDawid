@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="title">
     <h1 class="name">Dawid Bączkiewicz nr1</h1>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a></div>
     <br>
     <nav class="nav">
         <a href="index.php">Pracownicy</a>
@@ -23,6 +24,8 @@
 </html>
 <?php
     require_once("connect.php");
+
+    echo("<div class='zadania'>");
 
     $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
     $result = mysqli_query($conn, $sql);
@@ -72,4 +75,6 @@
             echo("</tr>");
         };
     echo("</table>");
+
+    echo("</div>")
 ?>
