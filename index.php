@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="title">
-    <h1 class="name">Dawid Bączkiewicz nr1</h1>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a></div>
-    <br>
-    <nav class="nav">
+    <div class="container">
+        <div class="tytul">
+            <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
+            <div class="imie">
+                <h1 class="name">Dawid Bączkiewicz nr1</h1>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
         <a href="index.php">Pracownicy</a>
         <a href="funkAgregujaca.php">Funkcje agregujące</a>
         <a href="orgPracownicy.php">Organizacja i pracownicy</a>
@@ -19,13 +23,10 @@
         <a href="formularz.html">Formularz</a>
         <a href="danedobazy.php">Dane do bazy</a>
         <a href="ksiazki.php">Ksiazki</a>
-    </nav>
-</body>
-</html>
-<?php
+    </div>
+    <div class="strona">
+    <?php
     require_once("connect.php");
-
-    echo("<div class='zadania'>");
 
     $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
     $result = mysqli_query($conn, $sql);
@@ -75,6 +76,8 @@
             echo("</tr>");
         };
     echo("</table>");
-
-    echo("</div>")
 ?>
+
+    </div>
+</body>
+</html>
