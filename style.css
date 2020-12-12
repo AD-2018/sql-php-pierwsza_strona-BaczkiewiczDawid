@@ -76,6 +76,8 @@ tr:nth-child(even) {
 }
   
 .nav {
+    display: flex;
+    flex-wrap: wrap;
     background-color: red;
     margin: 10px;
     width: 20%;
@@ -84,6 +86,8 @@ tr:nth-child(even) {
 }
   
 .strona {
+    display: flex;
+    flex-wrap: wrap;
     background-color: blue;
     margin: 10px;
     width: 70%;
