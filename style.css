@@ -74,20 +74,23 @@ tr:nth-child(even) {
     width: 100%;
     margin: 10px;
 }
+
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
   
 .nav {
-    display: flex;
-    flex-wrap: wrap;
     background-color: red;
     margin: 10px;
     width: 20%;
     height: 200%;
     flex-direction: column;
+    align-items: left;
 }
   
 .strona {
-    display: flex;
-    flex-wrap: wrap;
     background-color: blue;
     margin: 10px;
     width: 70%;
