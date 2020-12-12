@@ -15,16 +15,17 @@
             </div>
         </div>
     </div>
-    <div class="nav">
-        <a href="index.php">Pracownicy</a>
-        <a href="funkAgregujaca.php">Funkcje agregujące</a>
-        <a href="orgPracownicy.php">Organizacja i pracownicy</a>
-        <a href="dataczas.php">Data i czas</a>
-        <a href="formularz.html">Formularz</a>
-        <a href="danedobazy.php">Dane do bazy</a>
-        <a href="ksiazki.php">Ksiazki</a>
-    </div>
-    <div class="strona">
+    <div class="box">
+        <div class="nav">
+            <a href="index.php">Pracownicy</a>
+            <a href="funkAgregujaca.php">Funkcje agregujące</a>
+            <a href="orgPracownicy.php">Organizacja i pracownicy</a>
+            <a href="dataczas.php">Data i czas</a>
+            <a href="formularz.html">Formularz</a>
+            <a href="danedobazy.php">Dane do bazy</a>
+            <a href="ksiazki.php">Ksiazki</a>
+        </div>
+         <div class="strona">
     <?php
     require_once("connect.php");
 
@@ -78,6 +79,7 @@
     echo("</table>");
 ?>
 
+    </div>
     </div>
 </body>
 </html>
