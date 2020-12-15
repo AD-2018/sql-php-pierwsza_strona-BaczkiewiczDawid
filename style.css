@@ -94,5 +94,5 @@ tr:nth-child(even) {
     background-color: blue;
     margin: 10px;
     width: 70%;
-    height: 100vh;
+    height: 500px;
 }
