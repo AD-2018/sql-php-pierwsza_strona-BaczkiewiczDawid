@@ -90,8 +90,9 @@ tr:nth-child(even) {
     align-items: left;
 }
   
-.strona {
+.box .strona {
     background-color: blue;
     margin: 10px;
     width: 70%;
+    height: 100vh;
 }
