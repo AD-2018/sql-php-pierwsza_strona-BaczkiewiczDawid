@@ -17,13 +17,13 @@
     </div>
     <div class="box">
         <div class="nav">
-            <a href="index.php">Pracownicy</a>
-            <a href="funkAgregujaca.php">Funkcje agregujące</a>
-            <a href="orgPracownicy.php">Organizacja i pracownicy</a>
-            <a href="dataczas.php">Data i czas</a>
-            <a href="formularz.html">Formularz</a>
-            <a href="danedobazy.php">Dane do bazy</a>
-            <a href="ksiazki.php">Ksiazki</a>
+            <a href="index.php">Pracownicy</a><br>
+            <a href="funkAgregujaca.php">Funkcje agregujące</a><br>
+            <a href="orgPracownicy.php">Organizacja i pracownicy</a><br>
+            <a href="dataczas.php">Data i czas</a><br>
+            <a href="formularz.html">Formularz</a><br>
+            <a href="danedobazy.php">Dane do bazy</a><br>
+            <a href="ksiazki.php">Ksiazki</a><br>
         </div>
          <div class="strona">
     <?php
