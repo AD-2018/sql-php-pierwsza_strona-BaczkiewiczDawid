@@ -31,6 +31,8 @@
 
     echo("Przykładowa zmiana kodu");
 
+    echo("Zmiana kodu na potrzeby filmiku");
+
     $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
     $result = mysqli_query($conn, $sql);
 
