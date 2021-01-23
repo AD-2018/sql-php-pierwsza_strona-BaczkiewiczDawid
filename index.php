@@ -29,6 +29,8 @@
     <?php
     require_once("connect.php");
 
+    echo("Przykładowa zmiana kodu");
+
     $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
     $result = mysqli_query($conn, $sql);
 
