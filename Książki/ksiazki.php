@@ -13,19 +13,19 @@
             <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
         </div>
         <div class="nav">
-            <a href="index.php">Pracownicy</a>
-            <a href="funkAgregujaca.php">Funkcje agregujące</a>
-            <a href="orgPracownicy.php">Organizacja i pracownicy</a>
-            <a href="dataczas.php">Data i czas</a>
-            <a href="formularz.html">Formularz</a>
-            <a href="danedobazy.php">Dane do bazy</a>
-            <a href="ksiazki.php">Ksiazki</a>
+        <a href="../index.php">Pracownicy</a><br>
+        <a href="../pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
+        <a href="../pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
+        <a href="../pracownicy/dataczas.php">Data i czas</a><br>
+        <a href="../pracownicy/formularz.html">Formularz</a><br>
+        <a href="../pracownicy/danedobazy.php">Dane do bazy</a><br>
+        <a href="ksiazki.php">Ksiazki</a><br>
         </div>
     </div>
 </body>
 </html>
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 
 $sql = "SELECT * FROM biblAutor, biblTytul";
 

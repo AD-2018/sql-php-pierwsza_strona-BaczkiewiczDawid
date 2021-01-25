@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -19,15 +18,15 @@
         <div class="nav">
             <a href="index.html">Pracownicy</a><br>
             <a href="pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
-            <a href="orgPracownicy.php">Organizacja i pracownicy</a><br>
-            <a href="dataczas.php">Data i czas</a><br>
-            <a href="formularz.html">Formularz</a><br>
-            <a href="danedobazy.php">Dane do bazy</a><br>
-            <a href="ksiazki.php">Ksiazki</a><br>
+            <a href="pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
+            <a href="pracownicy/dataczas.php">Data i czas</a><br>
+            <a href="pracownicy/formularz.html">Formularz</a><br>
+            <a href="pracownicy/danedobazy.php">Dane do bazy</a><br>
+            <a href="Książki/ksiazki.php">Ksiazki</a><br>
         </div>
         <div class="strona">
     <?php
-    require_once("./connect.php");
+    require_once("connect.php");
 
     $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
     $result = mysqli_query($conn, $sql);

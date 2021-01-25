@@ -11,13 +11,13 @@
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
     <br>
     <nav class="nav">
-        <a href="index.php">Pracownicy</a>
-        <a href="funkAgregujaca.php">Funkcje agregujące</a>
-        <a href="orgPracownicy.php">Organizacja i pracownicy</a>
-        <a href="dataczas.php">Data i czas</a>
-        <a href="formularz.html">Formularz</a>
-        <a href="danedobazy.php">Dane do bazy</a>
-        <a href="ksiazki.php">Ksiazki</a>
+    <a href="../index.php">Pracownicy</a><br>
+        <a href="funkAgregujaca.php">Funkcje agregujące</a><br>
+        <a href="orgPracownicy.php">Organizacja i pracownicy</a><br>
+        <a href="dataczas.php">Data i czas</a><br>
+        <a href="formularz.html">Formularz</a><br>
+        <a href="danedobazy.php">Dane do bazy</a><br>
+        <a href="../Książki/ksiazki.php">Ksiazki</a><br>
     </nav><br>
     <h2>Dodawanie pracownika</h2>
     <form action="insert.php" method="POST">
@@ -35,7 +35,7 @@
 </body>
 </html>
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 
 $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial";
 
