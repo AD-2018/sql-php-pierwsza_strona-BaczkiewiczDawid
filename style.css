@@ -98,6 +98,6 @@ tr:nth-child(even) {
     background-color: blue;
     margin: 10px;
     width: 70%;
-    height: 500px;
+    height: 100%;
     flex-direction: column;
 }

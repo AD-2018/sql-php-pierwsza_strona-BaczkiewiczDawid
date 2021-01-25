@@ -17,21 +17,17 @@
     </div>
     <div class="box">
         <div class="nav">
-            <a href="index.php">Pracownicy</a><br>
-            <a href="funkAgregujaca.php">Funkcje agregujące</a><br>
+            <a href="index.html">Pracownicy</a><br>
+            <a href="pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
             <a href="orgPracownicy.php">Organizacja i pracownicy</a><br>
             <a href="dataczas.php">Data i czas</a><br>
             <a href="formularz.html">Formularz</a><br>
             <a href="danedobazy.php">Dane do bazy</a><br>
             <a href="ksiazki.php">Ksiazki</a><br>
         </div>
-         <div class="strona">
+        <div class="strona">
     <?php
-    require_once("connect.php");
-
-    echo("Przykładowa zmiana kodu");
-
-    echo("Zmiana kodu na potrzeby filmiku");
+    require_once("./connect.php");
 
     $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
     $result = mysqli_query($conn, $sql);

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container__title">
+            <h1 class="name">Dawid Bączkiewicz nr1</h1>
+            <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
+        </div>
+        <div class="nav">
+            <a href="index.php">Pracownicy</a>
+            <a href="funkAgregujaca.php">Funkcje agregujące</a>
+            <a href="orgPracownicy.php">Organizacja i pracownicy</a>
+            <a href="dataczas.php">Data i czas</a>
+            <a href="formularz.html">Formularz</a>
+            <a href="danedobazy.php">Dane do bazy</a>
+            <a href="ksiazki.php">Ksiazki</a>
+        </div>
+    </div>
+</body>
+</html>
+<?php
+require_once("connect.php");
+
+$sql = "SELECT * FROM biblAutor, biblTytul";
+
+$result = mysqli_query($conn, $sql);
+
+echo('<select name="autor">');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<option value="'.$row['id_autor'].'">');
+        echo($row['autor']);
+        echo("</option>"); 
+    }
+echo('</select>');
+
+$sql = "SELECT * FROM biblAutor, biblTytul";
+
+$result = mysqli_query($conn, $sql);
+
+echo('<select name="tytul">');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<option value="'.$row['id_tytul'].'">');
+        echo($row['tytul']);
+        echo("</option>"); 
+    }
+echo('</select>');
+
+$sql = "SELECT * FROM biblAutor";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<h1>BiblAutor</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>Autor</th>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['autor']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
+
+//--------------------------------------------------------------------
+
+$sql = "SELECT * FROM biblTytul";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<h1>BiblTytul</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>Tytul</th>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['tytul']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
+
+//--------------------------------------------------------------------
+
+$sql = "SELECT * FROM biblAutor_biblTytul";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<h1>BiblAutor_biblTytul</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>biblAutor_id</th><th>biblTytul_id</th><td>biblWypoz</td>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['biblAutor_id']."</td><td>".$row['biblTytul_id']."</td><td>".$row['biblWypoz']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
+
+//--------------------------------------------------------------------
+
+$sql = "SELECT * FROM biblTytul, biblAutor WHERE biblTytul.id = biblAutor.id";
+
+$result = mysqli_query($conn, $sql);
+
+echo("<h1>BiblAutor_biblTytul</h1>");
+echo("<h2>".$sql."</h2>");
+
+echo("<table border='1'>");
+echo("<th>ID</th><th>Autor</th><th>biblTytul</th>");
+    while($row = mysqli_fetch_assoc($result)) {
+        echo("<tr>");
+        echo("<td>".$row['id']."</td><td>".$row['autor']."</td><td>".$row['tytul']."</td>");
+        echo("</tr>");
+    };
+echo("</table>");
+?>
