@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1 class="name">Dawid Bączkiewicz nr1</h1>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
-    <br>
+<div class="container">
+        <div class="tytul">
+            <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
+            <div class="imie">
+                <h1 class="name">Dawid Bączkiewicz nr1</h1>
+            </div>
+        </div>
+    </div>
     <nav class="nav">
-    <a href="../index.php">Pracownicy</a><br>
-        <a href="funkAgregujaca.php">Funkcje agregujące</a><br>
-        <a href="orgPracownicy.php">Organizacja i pracownicy</a><br>
-        <a href="dataczas.php">Data i czas</a><br>
-        <a href="formularz.html">Formularz</a><br>
-        <a href="danedobazy.php">Dane do bazy</a><br>
-        <a href="../Książki/ksiazki.php">Ksiazki</a><br>
-    </nav>
-</body>
-</html>
-<?php
+    <div class="box">
+        <div class="nav">
+            <a href="index.php">Pracownicy</a><br>
+            <a href="Pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
+            <a href="Pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
+            <a href="Pracownicy/dataczas.php">Data i czas</a><br>
+            <a href="Pracownicy/formularz.html">Formularz</a><br>
+            <a href="Pracownicy/danedobazy.php">Dane do bazy</a><br>
+            <a href="Książki/ksiazki.php">Ksiazki</a><br>
+        </div>
+    <div class="strona">
+    <?php
     require_once("../connect.php");
 
     $sql = "SELECT SUM(zarobki) as suma FROM pracownicy, organizacja WHERE id_org = dzial";
@@ -323,3 +329,7 @@
         };
     echo("</table>");
 ?>
+    </div>
+    </div>
+</body>
+</html>
