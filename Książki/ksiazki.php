@@ -14,11 +14,11 @@
         </div>
         <div class="nav">
         <a href="../index.php">Pracownicy</a><br>
-        <a href="../pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
-        <a href="../pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
-        <a href="../pracownicy/dataczas.php">Data i czas</a><br>
-        <a href="../pracownicy/formularz.html">Formularz</a><br>
-        <a href="../pracownicy/danedobazy.php">Dane do bazy</a><br>
+        <a href="../Pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
+        <a href="../Pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
+        <a href="../Pracownicy/dataczas.php">Data i czas</a><br>
+        <a href="../Pracownicy/formularz.html">Formularz</a><br>
+        <a href="../Pracownicy/danedobazy.php">Dane do bazy</a><br>
         <a href="ksiazki.php">Ksiazki</a><br>
         </div>
     </div>
