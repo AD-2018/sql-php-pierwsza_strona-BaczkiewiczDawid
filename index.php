@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dawid Bączkiewicz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,12 +18,12 @@
     <div class="box">
         <div class="nav">
             <a href="index.php">Pracownicy</a><br>
-            <a href="Pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
-            <a href="Pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
-            <a href="Pracownicy/dataczas.php">Data i czas</a><br>
-            <a href="Pracownicy/formularz.html">Formularz</a><br>
-            <a href="Pracownicy/danedobazy.php">Dane do bazy</a><br>
-            <a href="Książki/ksiazki.php">Ksiazki</a><br>
+            <a href="pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
+            <a href="pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
+            <a href="pracownicy/dataczas.php">Data i czas</a><br>
+            <a href="pracownicy/formularz.html">Formularz</a><br>
+            <a href="pracownicy/danedobazy.php">Dane do bazy</a><br>
+            <a href="ksiazki/ksiazki.php">Ksiazki</a><br>
         </div>
         <div class="strona">
     <?php

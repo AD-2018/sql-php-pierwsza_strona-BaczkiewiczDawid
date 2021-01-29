@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="container__title">
-            <h1 class="name">Dawid Bączkiewicz nr1</h1>
+<div class="container">
+        <div class="tytul">
             <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-BaczkiewiczDawid" class="github-link">github</a>
+            <div class="imie">
+                <h1 class="name">Dawid Bączkiewicz nr1</h1>
+            </div>
         </div>
-        <div class="nav">
+    </div>
+    <div class="box">
+    <div class="nav">
         <a href="../index.php">Pracownicy</a><br>
         <a href="../Pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
         <a href="../Pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
@@ -21,10 +25,8 @@
         <a href="../Pracownicy/danedobazy.php">Dane do bazy</a><br>
         <a href="ksiazki.php">Ksiazki</a><br>
         </div>
-    </div>
-</body>
-</html>
-<?php
+        <div class="strona">
+        <?php
 require_once("../connect.php");
 
 $sql = "SELECT * FROM biblAutor, biblTytul";
@@ -121,3 +123,7 @@ echo("<th>ID</th><th>Autor</th><th>biblTytul</th>");
     };
 echo("</table>");
 ?>
+        </div>
+    </div>
+</body>
+</html>
