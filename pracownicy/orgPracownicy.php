@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dawid Bączkiewicz</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/styles.css">
     <link rel="icon" 
       type="image/png" 
-      href="../favicon.ico">
+      href="../img/favicon.ico">
 </head>
 <body>
 <div class="container">
@@ -30,7 +30,7 @@
         </div>
         <div class="strona">
         <?php
-    require_once("../connect.php");
+    require_once("../assets/connect.php");
 
     $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial";
 

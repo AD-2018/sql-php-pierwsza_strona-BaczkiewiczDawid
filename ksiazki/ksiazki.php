@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dawid Bączkiewicz</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/styles.css">
     <link rel="icon" 
       type="image/png" 
-      href="../favicon.ico">
+      href="../img/favicon.ico">
 </head>
 <body>
 <div class="container">
@@ -29,10 +29,15 @@
         <a href="ksiazki.php">Ksiazki</a><br>
         </div>
         <div class="strona">
+        <form action="insert-book.php" method="POST" class="form">
+	        <input type="text" name="autor" placeholder="Autor"><br>
+            <input type="text" name="tytul" placeholder="Tytuł"></br>
+            <input type="submit" value ="Dodaj Książke">
+    </form>
         <?php
-require_once("../connect.php");
+require_once("../assets/connect.php");
 
-$sql = "SELECT * FROM biblAutor, biblTytul";
+$sql = "SELECT * FROM biblAutor";
 
 $result = mysqli_query($conn, $sql);
 
@@ -44,7 +49,7 @@ echo('<select name="autor">');
     }
 echo('</select>');
 
-$sql = "SELECT * FROM biblAutor, biblTytul";
+$sql = "SELECT * FROM biblTytul";
 
 $result = mysqli_query($conn, $sql);
 
