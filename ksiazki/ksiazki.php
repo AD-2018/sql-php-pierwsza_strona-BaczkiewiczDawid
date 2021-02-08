@@ -30,11 +30,16 @@
         <a href="../flexbox/flexbox.html">Flexbox</a><br>
         </div>
         <div class="strona">
-        <form action="insert-book.php" method="POST" class="form">
+        <form action="insert-autor.php" method="POST" class="form">
 	        <input type="text" name="autor" placeholder="Autor"><br>
-            <input type="text" name="tytul" placeholder="Tytuł"></br>
-            <input type="submit" value ="Dodaj Książke">
+            <input type="submit" value ="Dodaj Autora">
     </form>
+    <form action="insert-tytul.php" method="POST" class="form">
+	        <input type="text" name="tytul" placeholder="Tytuł"><br>
+            <input type="submit" value ="Dodaj Tytuł">
+</form>
+    <br>
+    <br>
         <?php
 require_once("../assets/connect.php");
 
