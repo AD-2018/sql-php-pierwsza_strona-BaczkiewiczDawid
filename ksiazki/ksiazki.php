@@ -27,6 +27,7 @@
         <a href="../Pracownicy/formularz.html">Formularz</a><br>
         <a href="../Pracownicy/danedobazy.php">Dane do bazy</a><br>
         <a href="ksiazki.php">Ksiazki</a><br>
+        <a href="../flexbox/flexbox.html">Flexbox</a><br>
         </div>
         <div class="strona">
         <form action="insert-book.php" method="POST" class="form">

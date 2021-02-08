@@ -27,6 +27,7 @@
             <a href="formularz.html">Formularz</a><br>
             <a href="danedobazy.php">Dane do bazy</a><br>
             <a href="./ksiazki/ksiazki.php">Ksiazki</a><br>
+            <a href="../flexbox/flexbox.html">Flexbox</a><br>
         </div>
     <div class="strona">
     <?php

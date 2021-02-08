@@ -1,0 +1,34 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.title {
+    margin-top: 1rem;
+    background-color: lightblue;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.article__box {
+    width: 30vw;
+    align-items: center;
+    padding: 1rem;
+    background-color: lightblue;
+    height: 50vh;
+}
+
+.article__box:nth-child(2) {
+    margin-left: 1rem;
+}
+
+.footer {
+    margin-top: 1rem;
+    background-color: lightblue;
+}
