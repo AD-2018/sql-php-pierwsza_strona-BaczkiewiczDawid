@@ -15,10 +15,10 @@
     echo("<h2>".$sql."</h2>");
 
     echo("<table border='1'>");
-    echo("<th>ID</th>");
+    echo("<th>ID</th><th>Imie</th>");
         while($row = mysqli_fetch_assoc($result)) {
             echo("<tr>");
-            echo("<td>".$row['id_pracownicy']."</td>");
+            echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td>");
             echo("</tr>");
         };
     echo("</table>");
