@@ -28,10 +28,14 @@
             <a href="pracownicy/danedobazy.php">Dane do bazy</a><br>
             <a href="ksiazki/ksiazki.php">Ksiazki</a><br>
             <a href="flexbox/flexbox.html">Flexbox</a><br>
+            <a href="grid/gridOne.php">Grid</a><br>
         </div>
         <div class="strona">
     <?php
     require_once("assets/connect.php");
+
+    $d=strtotime("now");
+    echo "<li>".date("Y-m-d h:i:sa", $d) . "<br>";
 
     $sql = "SELECT * FROM pracownicy WHERE dzial = 2";
     $result = mysqli_query($conn, $sql);
