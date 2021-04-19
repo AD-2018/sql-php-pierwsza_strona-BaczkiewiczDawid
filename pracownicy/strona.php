@@ -15,13 +15,7 @@
     <br>
     <nav class="nav">
     <a href="../index.php">Pracownicy</a><br>
-        <a href="funkAgregujaca.php">Funkcje agregujące</a><br>
-        <a href="orgPracownicy.php">Organizacja i pracownicy</a><br>
-        <a href="dataczas.php">Data i czas</a><br>
-        <a href="formularz.html">Formularz</a><br>
-        <a href="danedobazy.php">Dane do bazy</a><br>
-        <a href="../ksiazki/ksiazki.php">Ksiazki</a><br>
-        <a href="../flexbox/flexbox.html">Flexbox</a><br>
+    <?php include_once('../assets/main_nav.php') ?>
     </nav><br>
 </body>
 </html>

@@ -20,15 +20,7 @@
     </div>
     <div class="box">
         <div class="nav">
-            <a href="index.php">Pracownicy</a><br>
-            <a href="pracownicy/funkAgregujaca.php">Funkcje agregujące</a><br>
-            <a href="pracownicy/orgPracownicy.php">Organizacja i pracownicy</a><br>
-            <a href="pracownicy/dataczas.php">Data i czas</a><br>
-            <a href="pracownicy/formularz.html">Formularz</a><br>
-            <a href="pracownicy/danedobazy.php">Dane do bazy</a><br>
-            <a href="ksiazki/ksiazki.php">Ksiazki</a><br>
-            <a href="flexbox/flexbox.html">Flexbox</a><br>
-            <a href="grid/gridOne.php">Grid</a><br>
+            <?php include_once('./assets/main_nav.php') ?>
         </div>
         <div class="strona">
     <?php
