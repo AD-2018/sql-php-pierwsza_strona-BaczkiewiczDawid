@@ -18,19 +18,7 @@
     </div>
     <div class="box">
         <div class="nav">
-            <a href="../index.php">Pracownicy</a><br>
-            <a href="gridOne.php">Grid1</a><br>
-            <a href="gridTwo.php">Grid2</a><br>
-            <a href="gridThree.php">Grid3</a><br>
-            <a href="gridFour.php">Grid4</a><br>
-            <a href="gridFive.php">Grid5</a><br>
-            <a href="gridSix.php">Grid6</a><br>
-            <a href="gridSeven.php">Grid7</a><br>
-            <a href="gridEight.php">Grid8</a><br>
-            <a href="gridNine.php">Grid9</a><br>
-            <a href="gridTen.php">Grid10</a><br>
-            <a href="gridEleven.php">Grid11</a><br>
-            <a href="gridTwelve.php">Grid12</a><br>
+            <?php include_once('../assets/grid_nav.php') ?>
         </div>
         <div class="strona">
             <header>

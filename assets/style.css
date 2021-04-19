@@ -4,6 +4,26 @@
     margin: 0;
 }
 
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    list-style-type: none;
+    margin-top: 3rem;
+}
+
+a {
+    text-decoration: none;
+    background-color: lightblue;
+    padding: 8px 18px;
+    border-radius: 15px;
+    color: black;
+}
+
 .container {
     width: 90%;
     text-align: center;
@@ -31,17 +51,7 @@ h2 {
     margin-left: 2em;
 }
 
-.nav a {
-    width: 250px;
-}
 
-a {
-    text-decoration: none;
-    background-color: lightblue;
-    padding: 8px 18px;
-    border-radius: 15px;
-    color: black;
-}
 
 table, th, td {
     border: 1px solid black;
