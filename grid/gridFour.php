@@ -35,7 +35,14 @@
                         echo("<th>ID</th><th>producent</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["producent"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["producent"].'</td>
+                        
+                        <td>
+                        <form action="delete_producent.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>');
                         echo("</tr>");
                     };
                     echo("</table>");
@@ -52,7 +59,14 @@
                         echo("<th>ID</th><th>produkt</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["produkt"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["produkt"].'</td>
+                        
+                        <td>
+                        <form action="delete_produkt.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>');
                         echo("</tr>");
                     };
                     echo("</table>");
@@ -69,7 +83,14 @@
                         echo("<th>ID</th><th>producent</th><th>produkt</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["producent"].'</td><td>'.$row["produkt"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["producent"].'</td><td>'.$row["produkt"].'</td>
+                        
+                        <td>
+                        <form action="delete_sklep.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>');
                         echo("</tr>");
                     };
                     echo("</table>");

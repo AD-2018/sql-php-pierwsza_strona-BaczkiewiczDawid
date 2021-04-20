@@ -33,7 +33,14 @@
                         echo("<th>ID</th><th>prawnik</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["prawnik"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["prawnik"].'</td>
+                        
+                        <td>
+                        <form action="delete_prawnicy.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>');
                         echo("</tr>");
                     };
                     echo("</table>");
@@ -50,7 +57,14 @@
                         echo("<th>ID</th><th>sprawa</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["sprawa"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["sprawa"].'</td>
+                        
+                        <td>
+                        <form action="delete_sprawy.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>');
                         echo("</tr>");
                     };
                     echo("</table>");
@@ -67,7 +81,14 @@
                         echo("<th>ID</th><th>prawnik</th><th>sprawa</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["prawnik"].'</td><td>'.$row["sprawa"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["prawnik"].'</td><td>'.$row["sprawa"].'</td>
+                        
+                        <td>
+                        <form action="delete_sad.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>');
                         echo("</tr>");
                     };
                     echo("</table>");

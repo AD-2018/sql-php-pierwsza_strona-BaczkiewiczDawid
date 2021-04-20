@@ -32,7 +32,16 @@
                         echo("<th>ID</th><th>nazwisko</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["nazwisko"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["nazwisko"].'</td>
+                        
+                        <td>
+                        <form action="delete_pracownicyFirmy.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>
+                        
+                        ');
                         echo("</tr>");
                     };
                     echo("</table>");
@@ -49,7 +58,16 @@
                         echo("<th>ID</th><th>rola</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["rola"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["rola"].'</td>
+                        
+                        <td>
+                        <form action="delete_rolaFirmy.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>
+                        
+                        ');
                         echo("</tr>");
                     };
                     echo("</table>");
@@ -66,7 +84,16 @@
                         echo("<th>ID</th><th>nazwisko</th><th>rola</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["nazwisko"].'</td><td>'.$row["rola"].'</td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["nazwisko"].'</td><td>'.$row["rola"].'</td>
+                        
+                        <td>
+                        <form action="delete_firma.php" method="POST">
+                            <input type="text" name="id" value="'.$row["id"].'" hidden>
+                            <input type="submit" value="X">
+                        </form>   
+                        </td>
+                        
+                        ');
                         echo("</tr>");
                     };
                     echo("</table>");
