@@ -84,20 +84,17 @@
                         echo("<th>ID</th><th>nazwisko</th><th>rola</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["nazwisko"].'</td><td>'.$row["rola"].'</td>
-                        
-                        <td>
-                        <form action="delete_firma.php" method="POST">
-                            <input type="text" name="id" value="'.$row["id"].'" hidden>
-                            <input type="submit" value="X">
-                        </form>   
-                        </td>
-                        
-                        ');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["nazwisko"].'</td><td>'.$row["rola"].'</td>');
                         echo("</tr>");
                     };
                     echo("</table>");
                 ?>
+
+                <form action="delete_firma.php" method="POST">
+                <h1>ID:</h1>
+	            <input type="number" name="id"></br>
+                <input type="submit" value="Usun">
+                </form>
             </main>
             <aside>
                 

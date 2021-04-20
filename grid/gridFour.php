@@ -83,18 +83,16 @@
                         echo("<th>ID</th><th>producent</th><th>produkt</th>");
                             while($row = mysqli_fetch_assoc($result)) {
                         echo("<tr>");
-                        echo('<td>'.$row["id"].'</td><td>'.$row["producent"].'</td><td>'.$row["produkt"].'</td>
-                        
-                        <td>
-                        <form action="delete_sklep.php" method="POST">
-                            <input type="text" name="id" value="'.$row["id"].'" hidden>
-                            <input type="submit" value="X">
-                        </form>   
-                        </td>');
+                        echo('<td>'.$row["id"].'</td><td>'.$row["producent"].'</td><td>'.$row["produkt"].'</td>');
                         echo("</tr>");
                     };
                     echo("</table>");
                 ?>
+                <form action="delete_sklep.php" method="POST">
+                <h1>ID:</h1>
+	            <input type="number" name="id"></br>
+                <input type="submit" value="Usun">
+                </form>
             </aside>
             <footer>
                 
