@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "DELETE FROM firma WHERE id=".$_POST['id'];
+$sql = "DELETE FROM pracownicyFirmy WHERE id=".$_POST['id'];
 
 echo $sql;
 
